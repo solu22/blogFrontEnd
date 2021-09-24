@@ -1,55 +1,55 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
 const BlogForm = ({ createBlog }) => {
   const [newBlog, setNewBlog] = useState({
-    title: "",
-    author: "",
-    url: "",
-    likes: "",
-  });
+    title: '',
+    author: '',
+    url: '',
+    likes: '',
+  })
 
   const handleBlogChange = (event) => {
-    event.preventDefault();
-    const { name, value } = event.target;
+    event.preventDefault()
+    const { name, value } = event.target
     setNewBlog((prev) => {
       return {
         ...prev,
         [name]: value,
-      };
-    });
-  };
+      }
+    })
+  }
 
   const addBlog = async (event) => {
-    event.preventDefault();
+    event.preventDefault()
 
     createBlog({
       title: newBlog.title,
       author: newBlog.author,
       url: newBlog.url,
       likes: newBlog.likes,
-    });
-    setNewBlog(" ");
-  };
+    })
+    setNewBlog(' ')
+  }
 
   return (
     <div>
       <form onSubmit={addBlog}>
-        Title:{" "}
+        Title:{' '}
         <input value={newBlog.title} onChange={handleBlogChange} name="title" />
-        Author:{" "}
+        Author:{' '}
         <input
           value={newBlog.author}
           onChange={handleBlogChange}
           name="author"
         />
-        Url:{" "}
+        Url:{' '}
         <input value={newBlog.url} onChange={handleBlogChange} name="url" />
-        Likes:{" "}
+        Likes:{' '}
         <input value={newBlog.likes} onChange={handleBlogChange} name="likes" />
         <button type="submit">Save</button>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default BlogForm;
+export default BlogForm
