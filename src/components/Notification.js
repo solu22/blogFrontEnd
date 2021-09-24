@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Notification = ({ message }) => {
-  if(!(message.type && message.content))
+  if((!message.type && !message.content))
   {
     return null
   }
