@@ -176,7 +176,7 @@ const App = () => {
       ) : (
         <div>
           <p>{user.name} logged in</p>
-          <button onClick={logout}>LogOut</button>
+          <button onClick={logout} id="logout">LogOut</button>
           {blogForm()}
 
           <div>

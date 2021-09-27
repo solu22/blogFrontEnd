@@ -7,9 +7,9 @@
 }
 
 .error{
-    color: maroon;
+    color: rgb(128, 0, 0);
     font-size: 20px;
     border-radius: 5px;
-    border: 2px solid maroon;
+    border: 2px solid;
     background-color: grey;
 }

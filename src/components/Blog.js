@@ -20,18 +20,18 @@ const Blog = ({ blog, updateLike, remove }) => {
           <p className ="show" >
             {blog.title} by {blog.author}
           </p>
-          <button onClick={() => setView(!view)}>
+          <button onClick={() => setView(!view)} id="view">
             {view ? 'hide' : 'view'}
           </button>
 
           <div style={viewDetails} className="details">
             <p> {blog.url}</p>
-            <p>
+            <p className= "blog-likes">
               {blog.likes}
-              <button onClick={() => updateLike(blog)}>like</button>
+              <button onClick={() => updateLike(blog)} id="like">like</button>
             </p>
             <p>B{blog.user.username}</p>
-            <button onClick= {() => remove(blog)}>Remove</button>
+            <button onClick= {() => remove(blog)} id="remove">Remove</button>
           </div>
         </div>
       </div>
